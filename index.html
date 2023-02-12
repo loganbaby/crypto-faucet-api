@@ -5,7 +5,11 @@
         fetch('https://faucetpay.io/api/v1/currencies', {
             method: 'post',
             headers: {
-                api_key: '7feb4afc08571ce131058ad3e44e163c51e2a547d8dae9f538e654cd680177e6'
+                api_key: '7feb4afc08571ce131058ad3e44e163c51e2a547d8dae9f538e654cd680177e6',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": true,
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
             }
         }).then(response => response.json()).then(data => console.log(data));
     </script>
