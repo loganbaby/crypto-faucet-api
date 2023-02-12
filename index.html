@@ -5,7 +5,8 @@
         fetch('https://faucetpay.io/api/v1/currencies', {
             method: 'post',
             headers: {
-                api_key: '298e7c576cc095efb72315f354e3cdfe712c55065f721d3cee9d38c66067a265'
+                'Content-Type': 'application/json;charset=UTF-8',
+                'Authorization': `Bearer ${'298e7c576cc095efb72315f354e3cdfe712c55065f721d3cee9d38c66067a265'}`
             }
         }).then(response => response.json()).then(data => console.log(data));
     </script>
